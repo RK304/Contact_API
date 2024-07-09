@@ -1,0 +1,105 @@
+# Angular
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+/dist
+
+# misc
+.DS_Store
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# Angular Files
+.angular/cache
+.angular/cli
+.angular/compiler
+.angular/language-service
+
+# Angular Environment Files
+src/environments/environment.*.ts
+
+# .NET Core
+# Visual Studio
+.vscode/
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider
+.idea/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Recycle Bin used by VSCode
+.vscode/.trash/
+
+# Project
+project.lock.json
+project.fragment.lock.json
+
+# ASP.NET
+artifacts/
+bin/
+obj/
+out/
+*.dll
+*.exe
+*.app
+*.pdb
+*.nuspec
+*.nupkg
+*.ps1
+*.sh
+*.props
+*.targets
+*.ps1xml
+*.sln
+*.suo
+*.swp
+*.vs
+*.xproj
+
+# Resharper
+_ReSharper*
+*.ReSharper.*
+resharper.xml
+resharper*.*
+
+# Web
+wwwroot/node_modules/
+wwwroot/lib/
+node_modules/
+
+# Azure
+node_modules/
+npm-debug.log
+project.lock.json
+packages/
+.env
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS generated files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/

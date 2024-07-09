@@ -1,0 +1,265 @@
+2024-07-08 21:50:46.3992||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (265ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+CREATE DATABASE [ContactsDb]; 
+2024-07-08 21:50:46.5060||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (103ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [ContactsDb] SET READ_COMMITTED_SNAPSHOT ON;
+END; 
+2024-07-08 21:50:46.5317||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 
+2024-07-08 21:50:46.6598||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+); 
+2024-07-08 21:50:46.6598||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 
+2024-07-08 21:50:46.6777||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]'); 
+2024-07-08 21:50:46.6851||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId]; 
+2024-07-08 21:50:46.6966||INFO|Microsoft.EntityFrameworkCore.Migrations|Applying migration '20240708161916_First'. 
+2024-07-08 21:50:46.7175||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Contacts] (
+    [Id] int NOT NULL IDENTITY,
+    [FirstName] nvarchar(max) NOT NULL,
+    [LastName] nvarchar(max) NOT NULL,
+    [Email] nvarchar(max) NOT NULL,
+    [PhoneNumber] nvarchar(max) NOT NULL,
+    [Address] nvarchar(max) NOT NULL,
+    [City] nvarchar(max) NOT NULL,
+    [State] nvarchar(max) NOT NULL,
+    [Country] nvarchar(max) NOT NULL,
+    [PostalCode] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Contacts] PRIMARY KEY ([Id])
+); 
+2024-07-08 21:50:46.7281||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20240708161916_First', N'8.0.6'); 
+2024-07-08 21:51:49.9090||INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\Dell\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2024-07-08 21:51:50.5889||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5249 
+2024-07-08 21:51:50.5889||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2024-07-08 21:51:50.5889||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2024-07-08 21:51:50.5889||INFO|Microsoft.Hosting.Lifetime|Content root path: E:\Learnings\Learning CSharp\ContactsApi 
+2024-07-08 21:52:12.0745||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5249/swagger - - - 
+2024-07-08 21:52:12.5987||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5249/swagger - 301 0 - 538.6390ms 
+2024-07-08 21:52:12.6037||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5249/swagger/index.html - - - 
+2024-07-08 21:52:12.7470||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5249/swagger/index.html - 200 - text/html;charset=utf-8 154.4846ms 
+2024-07-08 21:52:12.7974||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5249/swagger/swagger-ui.css - - - 
+2024-07-08 21:52:12.7974||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5249/swagger/swagger-ui-bundle.js - - - 
+2024-07-08 21:52:12.8075||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5249/swagger/swagger-ui-standalone-preset.js - - - 
+2024-07-08 21:52:12.8075||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5249/_framework/aspnetcore-browser-refresh.js - - - 
+2024-07-08 21:52:12.8075||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5249/_vs/browserLink - - - 
+2024-07-08 21:52:12.8075||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5249/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript;+charset=utf-8 10.9224ms 
+2024-07-08 21:52:12.9538||INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A' 
+2024-07-08 21:52:12.9538||INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A' 
+2024-07-08 21:52:12.9538||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5249/swagger/swagger-ui.css - 200 143943 text/css 164.2597ms 
+2024-07-08 21:52:12.9627||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5249/swagger/swagger-ui-standalone-preset.js - 200 339486 text/javascript 153.3769ms 
+2024-07-08 21:52:12.9997||INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A' 
+2024-07-08 21:52:12.9997||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5249/swagger/swagger-ui-bundle.js - 200 1096145 text/javascript 202.8839ms 
+2024-07-08 21:52:13.4834||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5249/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 665.2440ms 
+2024-07-08 21:52:13.5560||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5249/swagger/v1/swagger.json - - - 
+2024-07-08 21:52:13.5908||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5249/swagger/favicon-32x32.png - - - 
+2024-07-08 21:52:13.5908||INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A' 
+2024-07-08 21:52:13.5908||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5249/swagger/favicon-32x32.png - 200 628 image/png 1.0048ms 
+2024-07-08 21:52:13.7423||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5249/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 186.5675ms 
+2024-07-08 21:52:25.5474||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5249/api/Contacts - - - 
+2024-07-08 21:52:25.5573||WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. 
+2024-07-08 21:52:27.1609||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'ContactsApi.Controllers.ContactsController.GetContacts (ContactsApi)' 
+2024-07-08 21:52:27.1932||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetContacts", controller = "Contacts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ContactsApi.DTOs.ContactDto]]] GetContacts() on controller ContactsApi.Controllers.ContactsController (ContactsApi). 
+2024-07-08 21:52:27.7827||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method ContactsApi.Controllers.ContactsController.GetContacts (ContactsApi) - Validation state: Valid 
+2024-07-08 21:52:29.2522||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (29ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[Address], [c].[City], [c].[Country], [c].[Email], [c].[FirstName], [c].[LastName], [c].[PhoneNumber], [c].[PostalCode], [c].[State]
+FROM [Contacts] AS [c] 
+2024-07-08 21:52:29.2922||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method ContactsApi.Controllers.ContactsController.GetContacts (ContactsApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1497.2769ms. 
+2024-07-08 21:52:29.2922||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ContactsApi.DTOs.ContactDto, ContactsApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2024-07-08 21:52:29.3095||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action ContactsApi.Controllers.ContactsController.GetContacts (ContactsApi) in 2110.585ms 
+2024-07-08 21:52:29.3095||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'ContactsApi.Controllers.ContactsController.GetContacts (ContactsApi)' 
+2024-07-08 21:52:29.3095||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5249/api/Contacts - 200 - application/json;+charset=utf-8 3770.3213ms 
+2024-07-08 21:52:43.4609||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5249/api/Auth/token - - 0 
+2024-07-08 21:52:43.4618||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'ContactsApi.Controllers.AuthController.GenerateToken (ContactsApi)' 
+2024-07-08 21:52:43.4889||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GenerateToken", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GenerateToken() on controller ContactsApi.Controllers.AuthController (ContactsApi). 
+2024-07-08 21:52:43.4889||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method ContactsApi.Controllers.AuthController.GenerateToken (ContactsApi) - Validation state: Valid 
+2024-07-08 21:52:43.6762||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method ContactsApi.Controllers.AuthController.GenerateToken (ContactsApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 185.5044ms. 
+2024-07-08 21:52:43.6762||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2024-07-08 21:52:43.6810||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action ContactsApi.Controllers.AuthController.GenerateToken (ContactsApi) in 191.5034ms 
+2024-07-08 21:52:43.6810||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'ContactsApi.Controllers.AuthController.GenerateToken (ContactsApi)' 
+2024-07-08 21:52:43.6810||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5249/api/Auth/token - 200 - application/json;+charset=utf-8 220.6673ms 
+2024-07-08 21:55:43.9764||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5249/api/Contacts - - - 
+2024-07-08 21:55:43.9859||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'ContactsApi.Controllers.ContactsController.GetContacts (ContactsApi)' 
+2024-07-08 21:55:43.9859||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetContacts", controller = "Contacts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ContactsApi.DTOs.ContactDto]]] GetContacts() on controller ContactsApi.Controllers.ContactsController (ContactsApi). 
+2024-07-08 21:55:43.9859||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method ContactsApi.Controllers.ContactsController.GetContacts (ContactsApi) - Validation state: Valid 
+2024-07-08 21:55:44.0362||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (17ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[Address], [c].[City], [c].[Country], [c].[Email], [c].[FirstName], [c].[LastName], [c].[PhoneNumber], [c].[PostalCode], [c].[State]
+FROM [Contacts] AS [c] 
+2024-07-08 21:55:44.1774||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method ContactsApi.Controllers.ContactsController.GetContacts (ContactsApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 186.5721ms. 
+2024-07-08 21:55:44.1774||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ContactsApi.DTOs.ContactDto, ContactsApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2024-07-08 21:55:44.1842||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action ContactsApi.Controllers.ContactsController.GetContacts (ContactsApi) in 192.3802ms 
+2024-07-08 21:55:44.1842||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'ContactsApi.Controllers.ContactsController.GetContacts (ContactsApi)' 
+2024-07-08 21:55:44.1842||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5249/api/Contacts - 200 - application/json;+charset=utf-8 208.5892ms 
+2024-07-08 21:56:13.6193||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 PUT http://localhost:5249/api/Contacts/2 - application/json 222 
+2024-07-08 21:56:13.6193||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'ContactsApi.Controllers.ContactsController.UpdateContact (ContactsApi)' 
+2024-07-08 21:56:13.6443||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "UpdateContact", controller = "Contacts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateContact(Int32, ContactsApi.DTOs.ContactDto) on controller ContactsApi.Controllers.ContactsController (ContactsApi). 
+2024-07-08 21:56:13.6851||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method ContactsApi.Controllers.ContactsController.UpdateContact (ContactsApi) - Validation state: Valid 
+2024-07-08 21:56:13.6972||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method ContactsApi.Controllers.ContactsController.UpdateContact (ContactsApi), returned result Microsoft.AspNetCore.Mvc.BadRequestResult in 2.2773ms. 
+2024-07-08 21:56:13.6972||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'. 
+2024-07-08 21:56:13.7205||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action ContactsApi.Controllers.ContactsController.UpdateContact (ContactsApi) in 76.3413ms 
+2024-07-08 21:56:13.7205||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'ContactsApi.Controllers.ContactsController.UpdateContact (ContactsApi)' 
+2024-07-08 21:56:13.7205||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 PUT http://localhost:5249/api/Contacts/2 - 400 - application/problem+json;+charset=utf-8 101.9104ms 
+2024-07-08 21:57:16.6337||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 PUT http://localhost:5249/api/Contacts/2 - application/json 235 
+2024-07-08 21:57:16.6340||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'ContactsApi.Controllers.ContactsController.UpdateContact (ContactsApi)' 
+2024-07-08 21:57:16.6340||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "UpdateContact", controller = "Contacts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateContact(Int32, ContactsApi.DTOs.ContactDto) on controller ContactsApi.Controllers.ContactsController (ContactsApi). 
+2024-07-08 21:57:16.6340||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method ContactsApi.Controllers.ContactsController.UpdateContact (ContactsApi) - Validation state: Valid 
+2024-07-08 21:57:17.0249||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (122ms) [Parameters=[@p9='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Contacts] SET [Address] = @p0, [City] = @p1, [Country] = @p2, [Email] = @p3, [FirstName] = @p4, [LastName] = @p5, [PhoneNumber] = @p6, [PostalCode] = @p7, [State] = @p8
+OUTPUT 1
+WHERE [Id] = @p9; 
+2024-07-08 21:57:17.0455||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method ContactsApi.Controllers.ContactsController.UpdateContact (ContactsApi), returned result Microsoft.AspNetCore.Mvc.NoContentResult in 410.1197ms. 
+2024-07-08 21:57:17.0455||INFO|Microsoft.AspNetCore.Mvc.StatusCodeResult|Executing StatusCodeResult, setting HTTP status code 204 
+2024-07-08 21:57:17.0455||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action ContactsApi.Controllers.ContactsController.UpdateContact (ContactsApi) in 413.1195ms 
+2024-07-08 21:57:17.0455||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'ContactsApi.Controllers.ContactsController.UpdateContact (ContactsApi)' 
+2024-07-08 21:57:17.0455||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 PUT http://localhost:5249/api/Contacts/2 - 204 - - 414.4520ms 
+2024-07-08 22:04:20.6156||INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\Dell\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2024-07-08 22:04:20.9192||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5249 
+2024-07-08 22:04:20.9192||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2024-07-08 22:04:20.9192||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2024-07-08 22:04:20.9192||INFO|Microsoft.Hosting.Lifetime|Content root path: E:\Learnings\Learning CSharp\ContactsApi 
+2024-07-08 22:04:40.2828||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5249/swagger/index.html - - - 
+2024-07-08 22:04:40.6560||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5249/swagger/index.html - 200 - text/html;charset=utf-8 384.8518ms 
+2024-07-08 22:04:40.6877||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5249/_framework/aspnetcore-browser-refresh.js - - - 
+2024-07-08 22:04:40.6877||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5249/_vs/browserLink - - - 
+2024-07-08 22:04:40.6877||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5249/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript;+charset=utf-8 3.1524ms 
+2024-07-08 22:04:40.7490||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5249/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 63.4290ms 
+2024-07-08 22:04:41.0339||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5249/swagger/v1/swagger.json - - - 
+2024-07-08 22:04:41.1834||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5249/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 149.8245ms 
+2024-07-08 22:05:29.5876||INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\Dell\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2024-07-08 22:05:29.8574||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5249 
+2024-07-08 22:05:29.8574||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2024-07-08 22:05:29.8574||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2024-07-08 22:05:29.8574||INFO|Microsoft.Hosting.Lifetime|Content root path: E:\Learnings\Learning CSharp\ContactsApi 
+2024-07-08 22:05:45.8239||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5249/swagger/index.html - - - 
+2024-07-08 22:05:46.1743||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5249/swagger/index.html - 200 - text/html;charset=utf-8 358.5931ms 
+2024-07-08 22:05:46.2138||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5249/_framework/aspnetcore-browser-refresh.js - - - 
+2024-07-08 22:05:46.2138||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5249/_vs/browserLink - - - 
+2024-07-08 22:05:46.2138||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5249/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript;+charset=utf-8 3.7001ms 
+2024-07-08 22:05:46.2618||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5249/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 46.5650ms 
+2024-07-08 22:05:46.3552||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5249/swagger/v1/swagger.json - - - 
+2024-07-08 22:05:46.5305||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5249/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 175.5374ms 
+2024-07-08 22:06:20.1088||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5249/api/Contacts - application/json 203 
+2024-07-08 22:06:20.1184||WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. 
+2024-07-08 22:06:20.2452||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'ContactsApi.Controllers.ContactsController.AddContact (ContactsApi)' 
+2024-07-08 22:06:20.2657||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "AddContact", controller = "Contacts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[ContactsApi.DTOs.ContactDto]] AddContact(ContactsApi.DTOs.ContactDto) on controller ContactsApi.Controllers.ContactsController (ContactsApi). 
+2024-07-08 22:06:20.5271||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method ContactsApi.Controllers.ContactsController.AddContact (ContactsApi) - Validation state: Valid 
+2024-07-08 22:06:21.4276||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (45ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Contacts] ([Address], [City], [Country], [Email], [FirstName], [LastName], [PhoneNumber], [PostalCode], [State])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8); 
+2024-07-08 22:06:21.4720||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method ContactsApi.Controllers.ContactsController.AddContact (ContactsApi), returned result Microsoft.AspNetCore.Mvc.CreatedAtActionResult in 941.5422ms. 
+2024-07-08 22:06:21.4720||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing CreatedAtActionResult, writing value of type 'ContactsApi.DTOs.ContactDto'. 
+2024-07-08 22:06:21.4897||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action ContactsApi.Controllers.ContactsController.AddContact (ContactsApi) in 1229.4752ms 
+2024-07-08 22:06:21.4897||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'ContactsApi.Controllers.ContactsController.AddContact (ContactsApi)' 
+2024-07-08 22:06:21.5002||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5249/api/Contacts - 201 - application/json;+charset=utf-8 1396.7266ms 
+2024-07-08 22:06:28.7984||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5249/api/Contacts - - - 
+2024-07-08 22:06:28.7984||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'ContactsApi.Controllers.ContactsController.GetContacts (ContactsApi)' 
+2024-07-08 22:06:28.7984||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetContacts", controller = "Contacts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ContactsApi.DTOs.ContactDto]]] GetContacts() on controller ContactsApi.Controllers.ContactsController (ContactsApi). 
+2024-07-08 22:06:28.7984||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method ContactsApi.Controllers.ContactsController.GetContacts (ContactsApi) - Validation state: Valid 
+2024-07-08 22:06:29.0634||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[Address], [c].[City], [c].[Country], [c].[Email], [c].[FirstName], [c].[LastName], [c].[PhoneNumber], [c].[PostalCode], [c].[State]
+FROM [Contacts] AS [c] 
+2024-07-08 22:06:29.0752||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method ContactsApi.Controllers.ContactsController.GetContacts (ContactsApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 280.2291ms. 
+2024-07-08 22:06:29.0752||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ContactsApi.DTOs.ContactDto, ContactsApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2024-07-08 22:06:29.0872||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action ContactsApi.Controllers.ContactsController.GetContacts (ContactsApi) in 282.6398ms 
+2024-07-08 22:06:29.0872||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'ContactsApi.Controllers.ContactsController.GetContacts (ContactsApi)' 
+2024-07-08 22:06:29.0872||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5249/api/Contacts - 200 - application/json;+charset=utf-8 289.6621ms 
+2024-07-08 22:13:04.3838||INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\Dell\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2024-07-08 22:13:04.5293||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5249 
+2024-07-08 22:13:04.5293||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2024-07-08 22:13:04.5293||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2024-07-08 22:13:04.5293||INFO|Microsoft.Hosting.Lifetime|Content root path: E:\Learnings\Learning CSharp\ContactsApi 
+2024-07-08 22:13:20.4529||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5249/swagger/index.html - - - 
+2024-07-08 22:13:20.7276||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5249/swagger/index.html - 200 - text/html;charset=utf-8 282.5757ms 
+2024-07-08 22:13:20.8156||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5249/_framework/aspnetcore-browser-refresh.js - - - 
+2024-07-08 22:13:20.8156||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5249/_vs/browserLink - - - 
+2024-07-08 22:13:20.8156||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5249/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript;+charset=utf-8 3.0990ms 
+2024-07-08 22:13:20.8488||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5249/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 32.7710ms 
+2024-07-08 22:13:20.9179||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5249/swagger/v1/swagger.json - - - 
+2024-07-08 22:13:21.0235||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5249/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 105.9293ms 
+2024-07-08 22:13:24.7166||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5249/api/Contacts - - - 
+2024-07-08 22:13:24.7285||WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. 
+2024-07-08 22:13:25.4726||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'ContactsApi.Controllers.ContactsController.GetContacts (ContactsApi)' 
+2024-07-08 22:13:25.4867||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetContacts", controller = "Contacts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ContactsApi.DTOs.ContactDto]]] GetContacts() on controller ContactsApi.Controllers.ContactsController (ContactsApi). 
+2024-07-08 22:13:25.8525||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method ContactsApi.Controllers.ContactsController.GetContacts (ContactsApi) - Validation state: Valid 
+2024-07-08 22:13:27.1492||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (30ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[Address], [c].[City], [c].[Country], [c].[Email], [c].[FirstName], [c].[LastName], [c].[PhoneNumber], [c].[PostalCode], [c].[State]
+FROM [Contacts] AS [c] 
+2024-07-08 22:13:27.2205||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method ContactsApi.Controllers.ContactsController.GetContacts (ContactsApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1359.4776ms. 
+2024-07-08 22:13:27.2205||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ContactsApi.DTOs.ContactDto, ContactsApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2024-07-08 22:13:27.2314||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action ContactsApi.Controllers.ContactsController.GetContacts (ContactsApi) in 1744.3032ms 
+2024-07-08 22:13:27.2314||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'ContactsApi.Controllers.ContactsController.GetContacts (ContactsApi)' 
+2024-07-08 22:13:27.2314||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5249/api/Contacts - 200 - application/json;+charset=utf-8 2522.3186ms 
+2024-07-08 22:13:41.4147||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5249/api/Contacts/3 - - - 
+2024-07-08 22:13:41.4154||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'ContactsApi.Controllers.ContactsController.GetContact (ContactsApi)' 
+2024-07-08 22:13:41.4355||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetContact", controller = "Contacts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[ContactsApi.DTOs.ContactDto]] GetContact(Int32) on controller ContactsApi.Controllers.ContactsController (ContactsApi). 
+2024-07-08 22:13:41.4459||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method ContactsApi.Controllers.ContactsController.GetContact (ContactsApi) - Validation state: Valid 
+2024-07-08 22:13:41.6446||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (60ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Address], [c].[City], [c].[Country], [c].[Email], [c].[FirstName], [c].[LastName], [c].[PhoneNumber], [c].[PostalCode], [c].[State]
+FROM [Contacts] AS [c]
+WHERE [c].[Id] = @__p_0 
+2024-07-08 22:13:41.6493||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method ContactsApi.Controllers.ContactsController.GetContact (ContactsApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 203.365ms. 
+2024-07-08 22:13:41.6493||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'ContactsApi.DTOs.ContactDto'. 
+2024-07-08 22:13:41.6493||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action ContactsApi.Controllers.ContactsController.GetContact (ContactsApi) in 214.7673ms 
+2024-07-08 22:13:41.6493||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'ContactsApi.Controllers.ContactsController.GetContact (ContactsApi)' 
+2024-07-08 22:13:41.6493||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5249/api/Contacts/3 - 200 - application/json;+charset=utf-8 236.3405ms 
+2024-07-08 22:14:02.3065||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 DELETE http://localhost:5249/api/Contacts/3 - - - 
+2024-07-08 22:14:02.3065||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'ContactsApi.Controllers.ContactsController.DeleteContact (ContactsApi)' 
+2024-07-08 22:14:02.3065||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "DeleteContact", controller = "Contacts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteContact(Int32) on controller ContactsApi.Controllers.ContactsController (ContactsApi). 
+2024-07-08 22:14:02.3065||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method ContactsApi.Controllers.ContactsController.DeleteContact (ContactsApi) - Validation state: Valid 
+2024-07-08 22:14:02.3566||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Address], [c].[City], [c].[Country], [c].[Email], [c].[FirstName], [c].[LastName], [c].[PhoneNumber], [c].[PostalCode], [c].[State]
+FROM [Contacts] AS [c]
+WHERE [c].[Id] = @__p_0 
+2024-07-08 22:14:02.4879||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Contacts]
+OUTPUT 1
+WHERE [Id] = @p0; 
+2024-07-08 22:14:02.4977||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method ContactsApi.Controllers.ContactsController.DeleteContact (ContactsApi), returned result Microsoft.AspNetCore.Mvc.NoContentResult in 188.2718ms. 
+2024-07-08 22:14:02.4977||INFO|Microsoft.AspNetCore.Mvc.StatusCodeResult|Executing StatusCodeResult, setting HTTP status code 204 
+2024-07-08 22:14:02.4977||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action ContactsApi.Controllers.ContactsController.DeleteContact (ContactsApi) in 191.7298ms 
+2024-07-08 22:14:02.4977||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'ContactsApi.Controllers.ContactsController.DeleteContact (ContactsApi)' 
+2024-07-08 22:14:02.4977||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 DELETE http://localhost:5249/api/Contacts/3 - 204 - - 206.3086ms 
+2024-07-08 22:15:51.3678||INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\Dell\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2024-07-08 22:15:51.6496||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5249 
+2024-07-08 22:15:51.6496||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2024-07-08 22:15:51.6496||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2024-07-08 22:15:51.6496||INFO|Microsoft.Hosting.Lifetime|Content root path: E:\Learnings\Learning CSharp\ContactsApi 
+2024-07-08 22:16:11.1330||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5249/swagger/index.html - - - 
+2024-07-08 22:16:11.4021||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5249/swagger/index.html - 200 - text/html;charset=utf-8 281.8432ms 
+2024-07-08 22:16:11.4988||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5249/_framework/aspnetcore-browser-refresh.js - - - 
+2024-07-08 22:16:11.4988||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5249/_vs/browserLink - - - 
+2024-07-08 22:16:11.4988||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5249/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript;+charset=utf-8 2.7775ms 
+2024-07-08 22:16:11.5354||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5249/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 35.1364ms 
+2024-07-08 22:16:11.5934||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5249/swagger/v1/swagger.json - - - 
+2024-07-08 22:16:11.7340||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5249/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 141.3534ms 
+2024-07-08 22:16:19.7367||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 DELETE http://localhost:5249/api/Contacts/50 - - - 
+2024-07-08 22:16:19.7451||WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. 
+2024-07-08 22:16:19.8063||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'ContactsApi.Controllers.ContactsController.DeleteContact (ContactsApi)' 
+2024-07-08 22:16:19.8297||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "DeleteContact", controller = "Contacts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteContact(Int32) on controller ContactsApi.Controllers.ContactsController (ContactsApi). 
+2024-07-08 22:16:19.9952||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method ContactsApi.Controllers.ContactsController.DeleteContact (ContactsApi) - Validation state: Valid 
+2024-07-08 22:16:20.8947||INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (44ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Address], [c].[City], [c].[Country], [c].[Email], [c].[FirstName], [c].[LastName], [c].[PhoneNumber], [c].[PostalCode], [c].[State]
+FROM [Contacts] AS [c]
+WHERE [c].[Id] = @__p_0 
+2024-07-08 22:16:20.9152||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method ContactsApi.Controllers.ContactsController.DeleteContact (ContactsApi), returned result Microsoft.AspNetCore.Mvc.NotFoundResult in 927.7625ms. 
+2024-07-08 22:16:20.9312||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'. 
+2024-07-08 22:16:20.9510||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action ContactsApi.Controllers.ContactsController.DeleteContact (ContactsApi) in 1120.7877ms 
+2024-07-08 22:16:20.9510||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'ContactsApi.Controllers.ContactsController.DeleteContact (ContactsApi)' 
+2024-07-08 22:16:20.9510||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 DELETE http://localhost:5249/api/Contacts/50 - 404 - application/problem+json;+charset=utf-8 1225.3268ms 
